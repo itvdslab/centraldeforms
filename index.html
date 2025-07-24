@@ -216,20 +216,13 @@
       cursor: pointer;
       transition: all 0.3s ease;
       z-index: 1000;
-      border: 1px solid #bdc3c7;
+      border: none;
+      outline: none;
     }
 
     .login-btn:hover {
       color: #2c3e50;
       transform: translateY(-2px);
-    }
-
-    .admin-button {
-      display: none;
-    }
-
-    .admin-button.visible {
-      display: flex;
     }
 
     .logout-btn {
@@ -245,7 +238,8 @@
       cursor: pointer;
       transition: all 0.3s ease;
       z-index: 1000;
-      border: 1px solid #bdc3c7;
+      border: none;
+      outline: none;
     }
 
     .logout-btn:hover {
@@ -596,6 +590,12 @@
         // Mostrar indicador de administrador
         adminIndicator.classList.add('active');
         
+        // Mostrar todos os formulários administrativos
+        const adminForms = document.querySelectorAll('.admin-form');
+        adminForms.forEach(form => {
+          form.classList.add('visible');
+        });
+        
         // Remover evento anterior e adicionar evento de logout
         loginBtn.removeEventListener('click', openLogin);
         loginBtn.addEventListener('click', hideAdminAccess);
@@ -610,6 +610,15 @@
         
         // Esconder indicador de administrador
         adminIndicator.classList.remove('active');
+        
+        // Esconder formulários administrativos que não são públicos
+        const adminForms = document.querySelectorAll('.admin-form');
+        adminForms.forEach(form => {
+          form.classList.remove('visible');
+        });
+        
+        // Reaplicar configurações para garantir visibilidade correta
+        loadFormSettings();
         
         // Remover evento anterior e adicionar evento de login
         loginBtn.removeEventListener('click', hideAdminAccess);
@@ -677,70 +686,82 @@
 
       // Aplicar configurações aos formulários
       function applyFormSettings(settings) {
+        // Resetar classes
+        const allForms = document.querySelectorAll('.menu > a');
+        allForms.forEach(form => {
+          form.classList.remove('public-form', 'admin-form', 'visible');
+        });
+        
         // Formulário 1
         const form1Element = document.querySelector('.menu').children[0];
         if (settings.form1 === 'public') {
           form1Element.classList.add('public-form');
-          form1Element.classList.remove('admin-form');
         } else {
           form1Element.classList.add('admin-form');
-          form1Element.classList.remove('public-form');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form1Element.classList.add('visible');
+          }
         }
         
         // Formulário 2
         const form2Element = document.querySelector('.menu').children[1];
         if (settings.form2 === 'public') {
           form2Element.classList.add('public-form');
-          form2Element.classList.remove('admin-form');
         } else {
           form2Element.classList.add('admin-form');
-          form2Element.classList.remove('public-form');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form2Element.classList.add('visible');
+          }
         }
         
         // Formulário 3
         const form3Element = document.querySelector('.menu').children[2];
         if (settings.form3 === 'public') {
           form3Element.classList.add('public-form');
-          form3Element.classList.remove('admin-form');
         } else {
           form3Element.classList.add('admin-form');
-          form3Element.classList.remove('public-form');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form3Element.classList.add('visible');
+          }
         }
         
         // Formulário 4
         const form4Element = document.querySelector('.menu').children[3];
         if (settings.form4 === 'public') {
           form4Element.classList.add('public-form');
-          form4Element.classList.remove('admin-form');
-          form4Element.classList.add('visible');
         } else {
           form4Element.classList.add('admin-form');
-          form4Element.classList.remove('public-form');
-          form4Element.classList.remove('visible');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form4Element.classList.add('visible');
+          }
         }
         
         // Formulário 5
         const form5Element = document.querySelector('.menu').children[4];
         if (settings.form5 === 'public') {
           form5Element.classList.add('public-form');
-          form5Element.classList.remove('admin-form');
-          form5Element.classList.add('visible');
         } else {
           form5Element.classList.add('admin-form');
-          form5Element.classList.remove('public-form');
-          form5Element.classList.remove('visible');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form5Element.classList.add('visible');
+          }
         }
         
         // Formulário 6
         const form6Element = document.querySelector('.menu').children[5];
         if (settings.form6 === 'public') {
           form6Element.classList.add('public-form');
-          form6Element.classList.remove('admin-form');
-          form6Element.classList.add('visible');
         } else {
           form6Element.classList.add('admin-form');
-          form6Element.classList.remove('public-form');
-          form6Element.classList.remove('visible');
+          // Se estiver no modo admin, mostrar
+          if (adminIndicator.classList.contains('active')) {
+            form6Element.classList.add('visible');
+          }
         }
       }
 
