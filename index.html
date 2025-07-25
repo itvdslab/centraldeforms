@@ -10,14 +10,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
       min-height: 100vh;
       padding: 20px;
     }
-
     .main-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -27,7 +25,6 @@
       align-items: start;
       min-height: calc(100vh - 40px);
     }
-
     .side-image {
       position: sticky;
       top: 20px;
@@ -36,18 +33,15 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
-
     .side-image:hover {
       transform: translateY(-5px);
     }
-
     .side-image img {
       width: 100%;
       height: 400px;
       object-fit: cover;
       display: block;
     }
-
     .content-area {
       background: white;
       border-radius: 20px;
@@ -56,34 +50,29 @@
       text-align: center;
       position: relative;
     }
-
     img.logo {
       max-width: 280px;
       height: auto;
       margin-bottom: 30px;
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
-
     h1 {
       color: #2c3e50;
       font-size: 2.2em;
       margin-bottom: 15px;
       font-weight: 600;
     }
-
     .subtitle {
       color: #5a6c7d;
       font-size: 1.1em;
       margin-bottom: 40px;
       line-height: 1.6;
     }
-
     .menu {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-
     a.button {
       display: flex;
       align-items: center;
@@ -100,7 +89,6 @@
       overflow: hidden;
       font-weight: 500;
     }
-
     a.button::before {
       content: '';
       position: absolute;
@@ -111,17 +99,14 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
       transition: left 0.5s;
     }
-
     a.button:hover::before {
       left: 100%;
     }
-
     a.button:hover {
       transform: translateX(5px);
       box-shadow: 0 8px 25px rgba(0, 120, 212, 0.4);
       background: linear-gradient(135deg, #106ebe, #004a87);
     }
-
     .button-icon {
       width: 24px;
       height: 24px;
@@ -129,7 +114,6 @@
       opacity: 0.9;
       flex-shrink: 0;
     }
-
     .image-caption {
       background: rgba(255, 255, 255, 0.9);
       padding: 15px;
@@ -139,43 +123,35 @@
       color: #5a6c7d;
       text-align: center;
     }
-
     @media (max-width: 1024px) {
       .main-container {
         grid-template-columns: 1fr;
         gap: 20px;
       }
-      
       .side-image {
         position: static;
         max-width: 400px;
         margin: 0 auto;
       }
-      
       .content-area {
         padding: 30px 20px;
       }
     }
-
     @media (max-width: 768px) {
       .content-area {
         padding: 25px 15px;
       }
-      
       h1 {
         font-size: 1.8em;
       }
-      
       a.button {
         padding: 16px 20px;
         font-size: 15px;
       }
-      
       .side-image img {
         height: 300px;
       }
     }
-
     .decorative-element {
       position: absolute;
       width: 100px;
@@ -184,24 +160,20 @@
       border-radius: 50%;
       animation: float 6s ease-in-out infinite;
     }
-
     .decorative-element:nth-child(1) {
       top: 10%;
       left: 5%;
       animation-delay: 0s;
     }
-
     .decorative-element:nth-child(2) {
       bottom: 15%;
       right: 8%;
       animation-delay: 3s;
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-20px) rotate(180deg); }
     }
-
     /* Estilos para o login */
     .login-btn {
       position: fixed;
@@ -219,12 +191,10 @@
       border: none;
       outline: none;
     }
-
     .login-btn:hover {
       color: #2c3e50;
       transform: translateY(-2px);
     }
-
     .logout-btn {
       position: fixed;
       bottom: 20px;
@@ -241,12 +211,10 @@
       border: none;
       outline: none;
     }
-
     .logout-btn:hover {
       color: #2c3e50;
       transform: translateY(-2px);
     }
-
     /* Estilos para o painel de administração */
     .admin-panel {
       position: fixed;
@@ -263,12 +231,10 @@
       visibility: hidden;
       transition: all 0.3s ease;
     }
-
     .admin-panel.active {
       opacity: 1;
       visibility: visible;
     }
-
     .admin-content {
       background: white;
       border-radius: 15px;
@@ -281,35 +247,29 @@
       transform: translateY(-20px);
       transition: transform 0.3s ease;
     }
-
     .admin-panel.active .admin-content {
       transform: translateY(0);
     }
-
     .admin-content h2 {
       text-align: center;
       margin-bottom: 20px;
       color: #2c3e50;
     }
-
     .form-control {
       display: flex;
       align-items: center;
       padding: 15px;
       border-bottom: 1px solid #eee;
     }
-
     .form-control:last-child {
       border-bottom: none;
     }
-
     .form-control label {
       flex: 1;
       text-align: left;
       color: #5a6c7d;
       font-weight: 500;
     }
-
     .form-control select {
       padding: 8px 15px;
       border-radius: 8px;
@@ -318,14 +278,12 @@
       font-size: 14px;
       cursor: pointer;
     }
-
     .form-actions {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin-top: 25px;
     }
-
     .btn {
       padding: 12px 25px;
       border: none;
@@ -335,26 +293,21 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, #0078d4, #005fa3);
       color: white;
     }
-
     .btn-primary:hover {
       background: linear-gradient(135deg, #106ebe, #004a87);
       transform: translateY(-2px);
     }
-
     .btn-secondary {
       background: #f1f1f1;
       color: #5a6c7d;
     }
-
     .btn-secondary:hover {
       background: #e0e0e0;
     }
-
     .close-panel {
       position: absolute;
       top: 15px;
@@ -365,11 +318,9 @@
       cursor: pointer;
       color: #7f8c8d;
     }
-
     .close-panel:hover {
       color: #2c3e50;
     }
-
     /* Indicador de administrador */
     .admin-indicator {
       position: fixed;
@@ -387,27 +338,22 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       z-index: 1000;
     }
-
     .admin-indicator.active {
       display: flex;
     }
-
     .admin-indicator svg {
       width: 18px;
       height: 18px;
     }
-
     /* Estilos para formulários públicos */
     .public-form {
       /* Estilo padrão - visível para todos */
     }
-
     /* Estilos para formulários administrativos */
     .admin-form {
       /* Estilo padrão - visível apenas para admin */
       display: none;
     }
-
     .admin-form.visible {
       display: flex;
     }
@@ -416,7 +362,6 @@
 <body>
   <div class="decorative-element"></div>
   <div class="decorative-element"></div>
-  
   <!-- Indicador de modo administrador -->
   <div id="adminIndicator" class="admin-indicator">
     <svg fill="currentColor" viewBox="0 0 24 24">
@@ -424,7 +369,6 @@
     </svg>
     ADMIN
   </div>
-  
   <div class="main-container">
     <div class="side-image">
       <img src="https://www.itv.org/wp-content/uploads/2021/09/VALE-ITV_20200915_Fe0039.png" alt="Pesquisador em laboratório">
@@ -432,13 +376,10 @@
         Pesquisa em Desenvolvimento Sustentável
       </div>
     </div>
-
     <div class="content-area">
       <img class="logo" src="https://i0.wp.com/ciborga.com/wp-content/uploads/2023/07/FFD5On1X0AgeYJL-removebg-preview.png?fit=962%2C259&ssl=1" alt="Logo do laboratório">
-
       <h1>Central de Formulários</h1>
       <p class="subtitle">Selecione uma opção para acessar o formulário correspondente às atividades laboratoriais</p>
-
       <div class="menu">
         <!-- Formulário público -->
         <a class="button public-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=HQGJzaAMT0GSc3ZHp6_XVQitE6s3lB9EhBE5v3VLj-FUODdEUzVDTFFBQ0pITTY0T0I4MFpNM1hQTi4u" target="_blank">
@@ -447,7 +388,6 @@
           </svg>
           Solicitação de Uso do Microscópio 3D de Raios X
         </a>
-        
         <!-- Formulário público -->
         <a class="button public-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=HQGJzaAMT0GSc3ZHp6_XVQitE6s3lB9EhBE5v3VLj-FURjJLTk1HUDJUTVQ5TUQ1VEJVODhVV0dTMC4u" target="_blank">
           <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -455,7 +395,6 @@
           </svg>
           Formulário de Solicitação de Sequenciamento
         </a>
-        
         <!-- Formulário público -->
         <a class="button public-form" href="https://forms.office.com/Pages/ResponsePage.aspx?id=HQGJzaAMT0GSc3ZHp6_XVQitE6s3lB9EhBE5v3VLj-FURFVJR1pWUVhaS1VaSzczRlVUVjZEQ0Y2WC4u" target="_blank">
           <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -463,7 +402,6 @@
           </svg>
           Formulário para Solicitação de Atividades Laboratoriais (ITV-DS)
         </a>
-        
         <!-- Formulário administrativo -->
         <a class="button admin-form" href="https://script.google.com/macros/s/AKfycbwxlkUz5XUp2jeAO02o9zd_VvgxfZKtkwd_dTIS1RkD3WNM1i5-VpoSXpf8_01r_ShL/exec" target="_blank">
           <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -471,7 +409,6 @@
           </svg>
           Dashboard de Manutenção de Equipamentos (ITV - DS)
         </a>
-        
         <!-- Formulário administrativo -->
         <a class="button admin-form" href="https://script.google.com/macros/s/AKfycbwppIT6LlClcQZfzmuKoOTfxTMnwxUHsDjamq8kgw4Xz-LPBkBvzvUm06sajXpod20nVA/exec" target="_blank">
           <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -479,7 +416,6 @@
           </svg>
           Dashboard de Sequenciamento (NextSeq 2000)
         </a>
-        
         <!-- Formulário administrativo -->
         <a class="button admin-form" href="https://lab-scheduler.onrender.com" target="_blank">
           <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -487,9 +423,15 @@
           </svg>
           Escala para uso dos laboratórios - ITV 
         </a>
+        <!-- Novo formulário -->
+        <a class="button public-form" href="https://script.google.com/macros/s/AKfycbz7IaRKtDmMOh0dXoX3BBY7AjfjHe56wKYX_V9Mdyy8Cup9npkLFMwWW3EDuBgoBX5F/exec" target="_blank">
+          <svg class="button-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M19 19H5V5H19V19M17 12H15V10H17V12M13 12H11V10H13V12M9 12H7V10H9V12Z"/>
+          </svg>
+          Sistema de Geração de Números ITV
+        </a>
       </div>
     </div>
-
     <div class="side-image">
       <img src="https://www.itv.org/wp-content/uploads/2022/08/2L6A9507-scaled.jpg" alt="Laboratório moderno">
       <div class="image-caption">
@@ -497,12 +439,10 @@
       </div>
     </div>
   </div>
-
   <!-- Botão de Login no canto inferior direito -->
   <button id="loginBtn" class="login-btn">
     Login de Administrador
   </button>
-
   <!-- Painel de Administração -->
   <div id="adminPanel" class="admin-panel">
     <div class="admin-content">
@@ -511,7 +451,6 @@
       <p style="text-align: center; margin-bottom: 25px; color: #5a6c7d;">
         Selecione quais formulários devem ser visíveis para todos os usuários
       </p>
-      
       <div class="form-control">
         <label>Solicitação de Uso do Microscópio 3D de Raios X</label>
         <select id="form1">
@@ -519,7 +458,6 @@
           <option value="admin">Administrador</option>
         </select>
       </div>
-      
       <div class="form-control">
         <label>Formulário de Solicitação de Sequenciamento</label>
         <select id="form2">
@@ -527,7 +465,6 @@
           <option value="admin">Administrador</option>
         </select>
       </div>
-      
       <div class="form-control">
         <label>Formulário para Solicitação de Atividades Laboratoriais (ITV-DS)</label>
         <select id="form3">
@@ -535,7 +472,6 @@
           <option value="admin">Administrador</option>
         </select>
       </div>
-      
       <div class="form-control">
         <label>Dashboard de Manutenção de Equipamentos (ITV - DS)</label>
         <select id="form4">
@@ -543,7 +479,6 @@
           <option value="admin" selected>Administrador</option>
         </select>
       </div>
-      
       <div class="form-control">
         <label>Dashboard de Sequenciamento (NextSeq 2000)</label>
         <select id="form5">
@@ -551,7 +486,6 @@
           <option value="admin" selected>Administrador</option>
         </select>
       </div>
-      
       <div class="form-control">
         <label>Escala para uso dos laboratórios - ITV</label>
         <select id="form6">
@@ -559,14 +493,19 @@
           <option value="admin" selected>Administrador</option>
         </select>
       </div>
-      
+      <div class="form-control">
+        <label>Sistema de Geração de Números ITV</label>
+        <select id="form7">
+          <option value="public">Público</option>
+          <option value="admin">Administrador</option>
+        </select>
+      </div>
       <div class="form-actions">
         <button id="cancelAdmin" class="btn btn-secondary">Cancelar</button>
         <button id="saveSettings" class="btn btn-primary">Salvar Configurações</button>
       </div>
     </div>
   </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Elementos do DOM
@@ -576,60 +515,48 @@
       const cancelAdmin = document.getElementById('cancelAdmin');
       const saveSettings = document.getElementById('saveSettings');
       const adminIndicator = document.getElementById('adminIndicator');
-      
       // Carregar configurações salvas
       loadFormSettings();
-      
       // Função para mostrar acesso administrativo
       function showAdminAccess() {
         // Alterar botão de login para logout
         loginBtn.textContent = 'Sair do Modo Administrativo';
         loginBtn.classList.remove('login-btn');
         loginBtn.classList.add('logout-btn');
-        
         // Mostrar indicador de administrador
         adminIndicator.classList.add('active');
-        
         // Mostrar todos os formulários administrativos
         const adminForms = document.querySelectorAll('.admin-form');
         adminForms.forEach(form => {
           form.classList.add('visible');
         });
-        
         // Remover evento anterior e adicionar evento de logout
         loginBtn.removeEventListener('click', openLogin);
         loginBtn.addEventListener('click', hideAdminAccess);
       }
-
       // Função para esconder acesso administrativo
       function hideAdminAccess() {
         // Alterar botão de logout para login
         loginBtn.textContent = 'Login de Administrador';
         loginBtn.classList.remove('logout-btn');
         loginBtn.classList.add('login-btn');
-        
         // Esconder indicador de administrador
         adminIndicator.classList.remove('active');
-        
         // Esconder formulários administrativos que não são públicos
         const adminForms = document.querySelectorAll(".admin-form");
         adminForms.forEach(form => {
           form.style.display = "none";
         });
-        
         // Reaplicar configurações para garantir visibilidade correta dos formulários públicos
         loadFormSettings();
         closeAdminPanel(); // Adicionado para fechar o painel administrativo ao sair do modo admin
-        
         // Remover evento anterior e adicionar evento de login
         loginBtn.removeEventListener('click', hideAdminAccess);
         loginBtn.addEventListener('click', openLogin);
       }
-
       // Função para abrir login
       function openLogin() {
         const adminKey = prompt("Por favor, insira a Chave de Administrador:");
-
         if (adminKey === 'admin123') {
           showAdminAccess();
           adminPanel.classList.add('active');
@@ -637,12 +564,10 @@
           alert('Chave de administrador inválida.');
         }
       }
-
       // Fechar painel de administração
       function closeAdminPanel() {
         adminPanel.classList.remove('active');
       }
-
       // Salvar configurações
       function saveFormSettings() {
         const settings = {
@@ -651,14 +576,13 @@
           form3: document.getElementById('form3').value,
           form4: document.getElementById('form4').value,
           form5: document.getElementById('form5').value,
-          form6: document.getElementById('form6').value
+          form6: document.getElementById('form6').value,
+          form7: document.getElementById('form7').value
         };
-        
         localStorage.setItem('formSettings', JSON.stringify(settings));
         applyFormSettings(settings);
         closeAdminPanel();
       }
-
       // Carregar configurações
       function loadFormSettings() {
         const savedSettings = localStorage.getItem('formSettings');
@@ -670,6 +594,7 @@
           document.getElementById('form4').value = settings.form4;
           document.getElementById('form5').value = settings.form5;
           document.getElementById('form6').value = settings.form6;
+          document.getElementById('form7').value = settings.form7 || 'public'; // Valor padrão
           applyFormSettings(settings);
         } else {
           // Configurações padrão
@@ -679,12 +604,12 @@
             form3: 'public',
             form4: 'admin',
             form5: 'admin',
-            form6: 'admin'
+            form6: 'admin',
+            form7: 'public'
           };
           applyFormSettings(defaultSettings);
         }
       }
-
       // Aplicar configurações aos formulários
       function applyFormSettings(settings) {
         // Resetar classes e esconder todos os formulários inicialmente
@@ -693,7 +618,6 @@
           form.classList.remove("public-form", "admin-form", "visible");
           form.style.display = "none"; // Esconder todos os formulários por padrão
         });
-        
         // Formulário 1
         const form1Element = document.querySelector(".menu").children[0];
         if (settings.form1 === "public") {
@@ -705,7 +629,6 @@
             form1Element.style.display = "flex";
           }
         }
-        
         // Formulário 2
         const form2Element = document.querySelector(".menu").children[1];
         if (settings.form2 === "public") {
@@ -717,7 +640,6 @@
             form2Element.style.display = "flex";
           }
         }
-        
         // Formulário 3
         const form3Element = document.querySelector(".menu").children[2];
         if (settings.form3 === "public") {
@@ -729,7 +651,6 @@
             form3Element.style.display = "flex";
           }
         }
-        
         // Formulário 4
         const form4Element = document.querySelector(".menu").children[3];
         if (settings.form4 === "public") {
@@ -741,7 +662,6 @@
             form4Element.style.display = "flex";
           }
         }
-        
         // Formulário 5
         const form5Element = document.querySelector(".menu").children[4];
         if (settings.form5 === "public") {
@@ -753,7 +673,6 @@
             form5Element.style.display = "flex";
           }
         }
-        
         // Formulário 6
         const form6Element = document.querySelector(".menu").children[5];
         if (settings.form6 === "public") {
@@ -765,14 +684,23 @@
             form6Element.style.display = "flex";
           }
         }
+        // Formulário 7 (novo)
+        const form7Element = document.querySelector(".menu").children[6];
+        if (settings.form7 === "public") {
+          form7Element.classList.add("public-form");
+          form7Element.style.display = "flex";
+        } else {
+          form7Element.classList.add("admin-form");
+          if (adminIndicator.classList.contains("active")) {
+            form7Element.style.display = "flex";
+          }
+        }
       }
-
       // Eventos
       loginBtn.addEventListener('click', openLogin);
       closePanel.addEventListener('click', closeAdminPanel);
       cancelAdmin.addEventListener('click', closeAdminPanel);
       saveSettings.addEventListener('click', saveFormSettings);
-      
       // Fechar painel ao clicar fora
       adminPanel.addEventListener('click', function(e) {
         if (e.target === adminPanel) {
